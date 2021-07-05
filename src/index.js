@@ -1,12 +1,15 @@
 import './sass/main.scss';
 import fetchCountries from './fetchCountries.js';
+import '@pnotify/core/dist/Angeler.css';
+const { defaults } = require('@pnotify/core');
+
+defaults.closerHover = false;
+
 
 import { alert, defaultModules } from '../node_modules/@pnotify/core/dist/PNotify.js';
   import * as PNotifyMobile from '../node_modules/@pnotify/mobile/dist/PNotifyMobile.js';
   defaultModules.set(PNotifyMobile, {});
-  alert({
-    text: 'Too many matches found. Please enter a more specific query!'
-  });
+  
 
 var debounce = require('lodash.debounce');
 
